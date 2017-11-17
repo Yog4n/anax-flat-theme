@@ -1,9 +1,23 @@
 /**
  * Regions, basics to show off the regions.
  */
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+li {
+    list-style: none;
+}
+
 .wrap-all {
+    background-color: #efefef;
     margin: 0 auto;
     max-width: 950px;
+}
+
+.footer {
+    background-color: #E1E1E1;
 }
 
 .footer-column {
@@ -15,9 +29,54 @@
     overflow: auto;
 }
 
+.footer-column-x {
+    text-align: center;
+}
+
+.footer-column-2 {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
 .sidebar {
     width: 33%;
     float: left;
+}
+
+.toc {
+    list-style: none;
+
+    h4 {
+        background-color: #00c200;
+    }
+
+    ul {
+        li {
+            a {
+                color: #00c200;
+            }
+        }
+    }
+}
+
+.byline {
+    padding: 15px;
+    border: 1px solid black;
+    width: 60%;
+    height: 80px;
+    margin: auto;
+    background-color: #f9f7f7;
+}
+.byline img {
+    float: left;
+    margin-right: 20px;
+    height: 80px;
+}
+
+.me {
+    width: 30%;
+    float: right;
+    margin: 10px;
 }
 
 .main .has-sidebar {
@@ -64,13 +123,13 @@
     }
 }
 
-.breadcrumb {
+.breadcrumb-list {
     margin-bottom: 22px;
 
     ul {
         margin: 0;
         padding: 0;
-        list-style-type: none;
+        list-style: none;
     }
 
     li {
