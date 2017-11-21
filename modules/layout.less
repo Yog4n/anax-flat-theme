@@ -47,17 +47,21 @@ ul {
 
         &.inner-wrap-footer {
             @gridWidth: 100%;
-            // background-color: #E1E1E1;
+            background-color: #b0b0b0;
             .grid(@gridWidth);
             .showGrid(@gridWidth, @gridImage);
-            background-color: rgba(205,205,205,0.4);
         }
 
         &.inner-wrap-header {
             @gridWidth: 100%;
-            // background-color: #E1E1E1;
+            background-color: #b0b0b0;
             .grid(@gridWidth);
             .showGrid(@gridWidth, @gridImage);
+        }
+
+        &.inner-wrap-main,
+        &.inner-wrap-breadcrumb {
+            background-color: #efefef;
         }
     }
 
@@ -67,9 +71,19 @@ ul {
 
         &.inner-wrap-footer {
             @gridWidth: 100%;
-            // background-color: #E1E1E1;
             .grid(@gridWidth);
-            background-color: rgba(205,205,205,0.4);
+            background-color: #b0b0b0;
+        }
+
+        &.inner-wrap-header {
+            @gridWidth: 100%;
+            background-color: #b0b0b0;
+            .grid(@gridWidth);
+        }
+
+        &.inner-wrap-main,
+        &.inner-wrap-breadcrumb {
+            background-color: #efefef;
         }
     }
 
@@ -79,7 +93,7 @@ ul {
     &.inner-wrap-footer,
     &.inner-wrap-header {
         @gridWidth: 100%;
-        // background-color: #E1E1E1;
+        background-color: #b0b0b0;
         .grid(@gridWidth);
         // .showGrid(@gridWidth, @gridImage);
     }
@@ -89,6 +103,10 @@ ul {
     .row();
 }
 
+.sidebar-left {
+    .column(5);
+}
+
 main.main.has-sidebar-left.has-sidebar {
     .column(19);
 }
@@ -96,7 +114,16 @@ main.main.has-sidebar-left.has-sidebar {
 .main {
     .column(24);
     // .push(2);
-    // background-color: rgba(0,255,0,0.4);
+}
+
+.inner-wrap-main,
+.inner-wrap-breadcrumb {
+    background-color: #efefef;
+}
+
+.inner-wrap-footer,
+.inner-wrap-header {
+
 }
 
 .footer-column-wrapper {
@@ -119,11 +146,6 @@ main.main.has-sidebar-left.has-sidebar {
 .site-footer {
     .column(@columns);
     text-align: center;
-}
-
-.inner-wrap-footer {
-    background-color: rgba(205,205,205,0.4);
-    // background-color: green;
 }
 
 .site-logo-text {
@@ -157,11 +179,6 @@ main.main.has-sidebar-left.has-sidebar {
     }
 }
 
-.sidebar {
-    .column(5);
-    // background-color: rgba(0,0,255,0.4)
-}
-
 .byline {
     .column(15);
     .push(1);
@@ -179,4 +196,13 @@ main.main.has-sidebar-left.has-sidebar {
     width: 30%;
     float: right;
     margin: 10px;
+}
+
+.footer-column-2 {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.site-footer {
+    border-top: 1px solid black;
 }
