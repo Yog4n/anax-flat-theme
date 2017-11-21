@@ -1,19 +1,12 @@
 /** --------------------------------------------------------------
  *  Responsive design
  */
+@import "grid-float.less";
 img {
     max-width: 100%;
 }
 
 @media screen and (max-width: 900px) {
-    .site-logo-text {
-        width: 40%;
-    }
-
-    .navbar2 {
-        width: 50%;
-    }
-
     .profile {
         width: 10%;
     }
@@ -24,21 +17,33 @@ img {
     .sidebar {
         display: none;
     }
+
+    .site-logo-text {
+        .column(9);
+    }
+
+    .navbar2 {
+        .column(15);
+        align-items: center;
+    }
 }
 
 
 @media screen and (max-width: 700px) {
-    .footer-column {
-        width: 100%;
-        border-bottom: 1px solid black;
+    .footer-column-wrapper {
+        // background-color: yellow;
+        .column(@columns);
+
+        .footer-column {
+            .column(@columns);
+        }
     }
 }
 
 
 @media screen and (max-width: 650px) {
     .byline {
-        width: 100%;
-        font-size: 0.9em;
+        display: none;
     }
 }
 
